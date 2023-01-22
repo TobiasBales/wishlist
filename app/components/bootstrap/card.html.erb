@@ -1,12 +1,12 @@
 <div class="card">
     <% if image.present? %>
         <div class="ratio ratio-<%= ratio %>">
-            <%= image_tag image, class: "card-img-top object-fit-#{image_fill}" %>
+            <%= image_tag image, class: "card-img-top object-fit-#{image_fill} #{image_classes}" %>
         </div>
     <% end %>
     <div class="card-body">
         <% if title.present? %>
-            <h5 class="card-title ellipsis"><%= title %></h5>
+            <h5 class="card-title ellipsis <%= title_classes %>"><%= title %></h5>
         <% end %>
         <% if subtitle.present? %>
             <h6 class="card-subtitle mb-2 text-muted ellipsis"><%= subtitle %></h6>

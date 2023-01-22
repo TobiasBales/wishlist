@@ -9,10 +9,11 @@ module Bootstrap
 
     sig do
       params(title: T.nilable(String), subtitle: T.nilable(String), text: T.nilable(String),
-             image: T.nilable(Image), ratio: String, image_fill: String).void
+             image: T.nilable(Image), ratio: String, image_fill: String, disabled: T::Boolean).void
     end
     # rubocop:disable Metrics/ParameterLists
-    def initialize(title: nil, subtitle: nil, text: nil, image: nil, ratio: "16x9", image_fill: "cover")
+    def initialize(title: nil, subtitle: nil, text: nil, image: nil, ratio: "16x9", image_fill: "cover",
+                   disabled: false)
       super
 
       @title = title
@@ -21,6 +22,7 @@ module Bootstrap
       @image = image
       @ratio = ratio
       @image_fill = image_fill
+      @disabled = disabled
     end
     # rubocop:enable Metrics/ParameterLists
 
@@ -47,6 +49,20 @@ module Bootstrap
     sig { returns(String) }
     def classes
       [].join(" ")
+    end
+
+    sig { returns(String) }
+    def title_classes
+      classes = []
+      classes << "text-muted" if @disabled
+      classes.join(" ")
+    end
+
+    sig { returns(String) }
+    def image_classes
+      classes = []
+      classes << "grayscale-75" if @disabled
+      classes.join(" ")
     end
   end
 end

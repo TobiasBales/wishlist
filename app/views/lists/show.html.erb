@@ -12,7 +12,8 @@
   <div class="row">
     <% @list.items.order(:name).each do |item| %>
       <div class="col-4 mb-3">
-        <%= render(B::Card.new(title: item.name, image: item.preview_or_placeholder, image_fill: "contain")) do |c| %>
+        <% subtitle = "bought" if item.done %>
+        <%= render(B::Card.new(title: item.name, subtitle: subtitle, image: item.preview_or_placeholder, image_fill: "contain", disabled: item.done)) do |c| %>
           <% c.with_body do %>
             <%= render(B::Button.new(text: t("general.open"), to: item.url, target: "_blank")) %>
           <% end %>

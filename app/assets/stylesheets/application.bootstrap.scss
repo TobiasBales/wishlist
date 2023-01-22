@@ -14,3 +14,7 @@
 .object-fit-contain {
   object-fit: contain;
 }
+
+.grayscale-75 {
+  filter: grayscale(0.75);
+}
