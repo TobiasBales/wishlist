@@ -11,7 +11,7 @@
   <h6><%= @list.person.name %></h6>
   <div class="row">
     <% @list.items.order(:name).each do |item| %>
-      <div class="col-4">
+      <div class="col-4 mb-3">
         <%= render(B::Card.new(title: item.name)) do |c| %>
           <% c.with_body do %>
             <%= render(B::Button.new(text: t("general.open"), to: item.url)) %>
