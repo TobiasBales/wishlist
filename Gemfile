@@ -6,12 +6,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.2.0"
 
 gem "authentication-zero", "~> 2.16"
+gem "aws-sdk-s3", "~> 1.118", require: false
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", require: false
 gem "cssbundling-rails"
+gem "image_processing", "~> 1.2"
 gem "jsbundling-rails"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
+gem "que", "~> 2.2"
 gem "rails", "~> 7.0.4"
 gem "redis", "~> 4.0"
 gem "sorbet-runtime", "~> 0.5.10585"
@@ -20,7 +23,6 @@ gem "stimulus-rails"
 gem "turbo-rails"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "view_component", "~> 2.82"
-# gem "image_processing", "~> 1.2"
 
 group :development, :test do
   gem "debug", platforms: [:mri, :mingw, :x64_mingw]

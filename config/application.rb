@@ -24,5 +24,17 @@ module Wishlist
     config.generators do |g|
       g.orm :active_record, primary_key_type: :uuid
     end
+
+    config.active_record.schema_format = :sql
+
+    config.active_storage.variant_processor = :mini_magick
+
+    config.active_job.queue_adapter = :que
+
+    config.action_mailer.deliver_later_queue_name = :default
+    config.action_mailbox.queues.incineration = :default
+    config.action_mailbox.queues.routing = :default
+    config.active_storage.queues.analysis = :default
+    config.active_storage.queues.purge = :default
   end
 end
