@@ -11,6 +11,30 @@
   </head>
 
   <body>
+    <% unless current_page?(sign_in_path) || current_page?(sign_up_path) %>
+      <%= render(Bootstrap::Navigation.new) do |c| %>
+        <%= render(Bootstrap::Navigation::Item.new(text: t("lists.index.title"), to: root_path)) %>
+        <%= render(Bootstrap::Navigation::Item.new(text: t("people.index.title"), to: people_path)) %>
+        <% if Current.user.present? %>
+          <% c.with_right_item do  %>
+            <%= render(Bootstrap::Navigation::Dropdown.new(text: Current.user.email)) do %>
+              <%= render(Bootstrap::Navigation::DropdownDivider.new) %>
+              <%= render(Bootstrap::Navigation::DropdownItem.new(text: t("general.log_out"), to: Current.session, method: :delete)) %>
+            <% end %>
+          <% end %>
+        <% else %>
+          <% c.with_right_item do  %>
+            <%= render(Bootstrap::Navigation::Item.new(text: t("general.sign_in"), to: sign_in_path)) %>
+          <% end %>
+          <% c.with_right_item do  %>
+            <%= render(Bootstrap::Navigation::Item.new(text: t("general.sign_up"), to: sign_up_path)) %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+    
+    <%= render(Bootstrap::Notifications.new(flash: flash)) %>
+    
     <%= yield %>
   </body>
 </html>
