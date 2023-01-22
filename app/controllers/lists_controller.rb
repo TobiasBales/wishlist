@@ -11,7 +11,9 @@ class ListsController < ApplicationController
   end
 
   # GET /lists/1 or /lists/1.json
-  def show; end
+  def show
+    @items, @done = @list.items.order(:name).partition { |i| !i.done }
+  end
 
   # GET /lists/new
   def new
