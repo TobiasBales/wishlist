@@ -1,7 +1,7 @@
 <div class="card">
     <% if image.present? %>
-        <div class="ratio ratio-16x9">
-            <%= image_tag image, class: "card-img-top object-fit-cover" %>
+        <div class="ratio ratio-<%= ratio %>">
+            <%= image_tag image, class: "card-img-top object-fit-#{image_fill}" %>
         </div>
     <% end %>
     <div class="card-body">
