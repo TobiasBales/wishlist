@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  draw :madmin
   resources :lists
   resources :people
   get  "sign_in", to: "sessions#new"

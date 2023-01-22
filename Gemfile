@@ -13,6 +13,7 @@ gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem "image_processing", "~> 1.2"
 gem "jsbundling-rails"
+gem "madmin", "~> 1.2"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "que", "~> 2.2"

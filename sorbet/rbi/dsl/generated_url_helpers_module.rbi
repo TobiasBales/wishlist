@@ -21,6 +21,36 @@ module GeneratedUrlHelpersModule
   def edit_list_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_active_storage_attachment_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_active_storage_blob_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_active_storage_variant_record_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_email_verification_token_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_item_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_list_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_password_reset_token_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_person_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_session_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_user_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def edit_password_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -45,10 +75,103 @@ module GeneratedUrlHelpersModule
   def lists_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_attachment_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_attachments_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_blob_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_blobs_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_variant_record_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_variant_records_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_email_verification_token_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_email_verification_tokens_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_item_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_items_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_list_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_lists_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_password_reset_token_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_password_reset_tokens_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_people_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_person_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_root_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_session_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_sessions_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_user_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_users_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def new_identity_password_reset_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_list_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_active_storage_attachment_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_active_storage_blob_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_active_storage_variant_record_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_email_verification_token_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_item_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_list_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_password_reset_token_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_person_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_session_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_user_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_person_url(*args); end

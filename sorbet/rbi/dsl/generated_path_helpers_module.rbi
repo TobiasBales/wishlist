@@ -21,6 +21,36 @@ module GeneratedPathHelpersModule
   def edit_list_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_active_storage_attachment_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_active_storage_blob_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_active_storage_variant_record_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_email_verification_token_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_item_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_list_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_password_reset_token_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_person_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_session_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_madmin_user_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def edit_password_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -45,10 +75,103 @@ module GeneratedPathHelpersModule
   def lists_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_attachment_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_attachments_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_blob_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_blobs_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_variant_record_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_active_storage_variant_records_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_email_verification_token_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_email_verification_tokens_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_item_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_items_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_list_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_lists_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_password_reset_token_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_password_reset_tokens_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_people_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_person_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_root_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_session_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_sessions_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_user_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def madmin_users_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def new_identity_password_reset_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_list_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_active_storage_attachment_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_active_storage_blob_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_active_storage_variant_record_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_email_verification_token_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_item_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_list_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_password_reset_token_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_person_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_session_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_madmin_user_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_person_path(*args); end
