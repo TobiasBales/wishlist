@@ -1,9 +1,10 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
 
-.elipsis {
+.ellipsis {
   white-space: nowrap;
-  overflow: elipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .object-fit-cover {
