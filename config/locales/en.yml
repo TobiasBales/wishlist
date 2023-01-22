@@ -13,13 +13,13 @@ en:
       page_title: Lists
     show:
       title: "%{list}"
-      page_title: "List - %{list}"
+      page_title: "%{list}"
     new:
       title: New
       page_title: New list
     edit:
       title: Edit %{list}
-      page_title: List - Edit %{list}
+      page_title: Edit %{list}
     actions:
       new: New list
       destroy: Destroy list
@@ -30,13 +30,13 @@ en:
       page_title: People
     show:
       title: "%{person}"
-      page_title: "Person - %{person}"
+      page_title: "%{person}"
     new:
       title: New
       page_title: New person
     edit:
       title: Edit %{person}
-      page_title: Person - Edit %{person}
+      page_title: Edit %{person}
     actions:
       new: New person
       destroy: Destroy person
