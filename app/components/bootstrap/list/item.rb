@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 module Bootstrap
-  module List
+  class List
     class Item < Bootstrap::Component
       extend T::Sig
 
