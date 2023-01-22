@@ -10,7 +10,7 @@
   <h5><%= @list.name %></h5>
   <h6><%= @list.person.name %></h6>
   <div class="row">
-    <% @list.items.each do |item| %>
+    <% @list.items.order(:name).each do |item| %>
       <div class="col-4">
         <%= render(B::Card.new(title: item.name)) do |c| %>
           <% c.with_body do %>
