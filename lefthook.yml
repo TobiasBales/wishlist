@@ -1,0 +1,59 @@
+---
+skip_output:
+  ---
+  - meta
+  - success
+  - summary
+
+pre-push:
+  parallel: true
+  commands:
+    rubocop:
+      run: bin/rubocop
+    sorbet:
+      run: bin/srb tc
+    spoom_verify:
+      run: bin/spoom bump --dry --from false --to true && bin/spoom bump --dry --from true --to strict
+    # strong_versions:
+    #   run: bin/strong_versions
+    system_tests:
+      run: bin/rails test:system
+    tapioca_dsl:
+      run: bin/tapioca dsl --verify
+    tapioca_gem:
+      run: bin/tapioca gem --verify
+    # i18n-health:
+    #   run: bin/i18n-tasks health
+    tests:
+      run: bin/rails test
+      
+pre-commit:
+  parallel: true
+  commands:
+    rubocop:
+      glob: "*.rb"
+      run: bin/rubocop --force-exclusion {all_files}
+    sorbet:
+      glob: "*.rb"
+      run: bin/srb tc
+    spoom_verify:
+      run: bin/spoom bump --dry --from false --to true && bin/spoom bump --dry --from true --to strict
+    # strong_versions:
+    #   glob: "Gemfile"
+    #   run: bin/strong_versions
+    tapioca_dsl:
+      files: git diff --name-only --staged
+      glob: "{*.rb,Gemfile,Gemfile.lock}"
+      run: bin/tapioca dsl --verify
+    tapioca_gem:
+      files: git diff --name-only --staged
+      glob: "{*.rb,Gemfile,Gemfile.lock}"
+      run: bin/tapioca gem --verify
+    # i18n-health:
+    #   glob: config/locales/*.yml
+    #   run: bin/i18n-tasks health
+    tests:
+      files: git diff --name-only --staged
+      glob: "*.{rb,html.erb}"
+      run: bin/rails test
+      
