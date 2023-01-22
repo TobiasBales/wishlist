@@ -418,7 +418,8 @@ CREATE TABLE public.users (
     verified boolean DEFAULT false NOT NULL,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL,
-    enabled boolean DEFAULT false NOT NULL
+    enabled boolean DEFAULT false NOT NULL,
+    admin boolean DEFAULT false NOT NULL
 );
 
 
@@ -733,6 +734,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20230122113521'),
 ('20230122131626'),
 ('20230122180125'),
-('20230122180738');
+('20230122180738'),
+('20230122190538');
 
 
