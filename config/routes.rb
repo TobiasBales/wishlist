@@ -15,9 +15,5 @@ Rails.application.routes.draw do
     resource :email_verification, only: [:edit, :create]
     resource :password_reset,     only: [:new, :edit, :create, :update]
   end
-  root "home#index"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root "lists#index"
 end
