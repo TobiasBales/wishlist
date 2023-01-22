@@ -6,6 +6,7 @@ require "test_helper"
 class PeopleControllerTest < ActionDispatch::IntegrationTest
   setup do
     @person = people(:one)
+    sign_in_as(users(:default))
   end
 
   test "should get index" do
@@ -25,7 +26,7 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
       post people_url, params: { person: { name: @person.name } }
     end
 
-    assert_redirected_to person_url(Person.last)
+    assert_redirected_to person_url(Person.order(:created_at).last)
   end
 
   test "should show person" do
@@ -47,6 +48,7 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy person" do
+      @person = people(:no_lists)
     assert_difference("Person.count", -1) do
       delete person_url(@person)
     end

@@ -6,6 +6,7 @@ require "test_helper"
 class ListsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @list = lists(:one)
+    sign_in_as(users(:default))
   end
 
   test "should get index" do
@@ -25,7 +26,7 @@ class ListsControllerTest < ActionDispatch::IntegrationTest
       post lists_url, params: { list: { name: @list.name, person_id: @list.person_id } }
     end
 
-    assert_redirected_to list_url(List.last)
+    assert_redirected_to list_url(List.order(:created_at).last)
   end
 
   test "should show list" do

@@ -3,5 +3,5 @@
 one:
   name: MyString
 
-two:
+no_lists:
   name: MyString
