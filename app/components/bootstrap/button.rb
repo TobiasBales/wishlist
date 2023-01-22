@@ -9,10 +9,10 @@ module Bootstrap
 
     sig do
       params(text: String, to: Target, method: Symbol, style: Symbol, confirm: T.nilable(String),
-             params: T::Hash[T.untyped, T.untyped], dropdown: T::Boolean).void
+             params: T::Hash[T.untyped, T.untyped], dropdown: T::Boolean, target: T.nilable(String)).void
     end
     # rubocop:disable Metrics/ParameterLists
-    def initialize(text:, to:, method: :get, style: :primary, confirm: nil, params: {}, dropdown: false)
+    def initialize(text:, to:, method: :get, style: :primary, confirm: nil, params: {}, dropdown: false, target: nil)
       super
 
       @text = text
@@ -22,6 +22,7 @@ module Bootstrap
       @confirm = confirm
       @params = params
       @dropdown = dropdown
+      @target = target
     end
     # rubocop:enable Metrics/ParameterLists
 
@@ -45,6 +46,9 @@ module Bootstrap
 
     sig { returns(T::Boolean) }
     attr_reader :dropdown
+
+    sig { returns(T.nilable(String)) }
+    attr_reader :target
 
     sig { returns(String) }
     def classes

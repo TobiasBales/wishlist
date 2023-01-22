@@ -14,7 +14,7 @@
       <div class="col-4 mb-3">
         <%= render(B::Card.new(title: item.name, image: item.preview_or_placeholder)) do |c| %>
           <% c.with_body do %>
-            <%= render(B::Button.new(text: t("general.open"), to: item.url)) %>
+            <%= render(B::Button.new(text: t("general.open"), to: item.url, target: "_blank")) %>
           <% end %>
         <% end %>
       </div>
