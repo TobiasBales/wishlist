@@ -26,6 +26,7 @@ class ApplicationController
     include ::ApplicationHelper
     include ::ListsHelper
     include ::PeopleHelper
+    include ::PreviewHelper
   end
 
   class HelperProxy < ::ActionView::Base

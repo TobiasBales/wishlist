@@ -23,6 +23,7 @@ class Rails::Conductor::ActionMailbox::ReroutesController
     include ::ApplicationHelper
     include ::ListsHelper
     include ::PeopleHelper
+    include ::PreviewHelper
   end
 
   class HelperProxy < ::ActionView::Base

@@ -19,6 +19,7 @@ gem "sprockets-rails"
 gem "stimulus-rails"
 gem "turbo-rails"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "view_component", "~> 2.82"
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do

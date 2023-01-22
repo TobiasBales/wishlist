@@ -23,6 +23,7 @@ class Rails::Conductor::ActionMailbox::InboundEmails::SourcesController
     include ::ApplicationHelper
     include ::ListsHelper
     include ::PeopleHelper
+    include ::PreviewHelper
   end
 
   class HelperProxy < ::ActionView::Base

@@ -69,6 +69,12 @@ module GeneratedUrlHelpersModule
   def person_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def preview_view_component_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def preview_view_components_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def rails_blob_representation_proxy_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }

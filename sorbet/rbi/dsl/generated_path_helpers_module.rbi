@@ -69,6 +69,12 @@ module GeneratedPathHelpersModule
   def person_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def preview_view_component_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def preview_view_components_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def rails_blob_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
