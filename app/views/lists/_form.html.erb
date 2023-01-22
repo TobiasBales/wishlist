@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :person_id, style: "display: block" %>
-    <%= form.text_field :person_id %>
+    <%= form.select :person_id, options_for_select(@people.map { |p| [p.name, p.id]}) %>
   </div>
 
   <div>
