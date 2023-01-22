@@ -1,9 +1,7 @@
-<h1>New list</h1>
-
-<%= render "form", list: @list %>
-
-<br>
-
-<div>
-  <%= link_to "Back to lists", lists_path %>
-</div>
+<% page_title(t("lists.new.page_title")) %>
+<%= render(B::Page.new(crumbs: [
+  B::Crumb.new(text: t("lists.index.title"), to: lists_path),
+  B::Crumb.new(text: t("lists.new.title"), to: new_list_path),
+])) do %>
+  <%= render "form", list: @list %>
+<% end %>

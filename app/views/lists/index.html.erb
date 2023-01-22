@@ -1,14 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<% page_title(t("lists.index.page_title")) %>
+<%= render(B::Page.new(crumbs: [
+  B::Crumb.new(text: t("lists.index.title"), to: lists_path),
+])) do %>
+  <div id="lists" class="row">
+    <% @lists.each do |list| %>
+      <div class="col-4">
+        <%= render(B::Card.new(title: list.name, subtitle: list.person.name)) do |c| %>
+          <% c.with_body do %>
+            <%= render(B::Button.new(text: t("general.show"), to: list)) %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 
-<h1>Lists</h1>
-
-<div id="lists">
-  <% @lists.each do |list| %>
-    <%= render list %>
-    <p>
-      <%= link_to "Show this list", list %>
-    </p>
+  <%= render(B::Form::Actions.new) do %>
+    <%= render(B::Button.new(text: t("lists.actions.new"), to: new_list_path)) %>
   <% end %>
-</div>
-
-<%= link_to "New list", new_list_path %>
+<% end %>

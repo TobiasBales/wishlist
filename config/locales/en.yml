@@ -1,19 +1,42 @@
 en:
   general:
     confirm: Are you sure?
+    show: Show
     save: Save
+    open: Open
+    index:
+        title: Lists
+        page_title: Lists
   lists:
     index:
       title: Lists
+      page_title: Lists
+    show:
+      title: "%{list}"
+      page_title: "List - %{list}"
+    new:
+      title: New
+      page_title: New list
+    edit:
+      title: Edit %{list}
+      page_title: List - Edit %{list}
+    actions:
+      new: New list
+      destroy: Destroy list
+      edit: Edit list
   people:
     index:
       title: People
+      page_title: People
     show:
       title: "%{person}"
-      page_title: "People - %{person}"
+      page_title: "Person - %{person}"
     new:
       title: New
-      page_title: New Person
+      page_title: New person
+    edit:
+      title: Edit %{person}
+      page_title: Person - Edit %{person}
     actions:
       new: New person
       destroy: Destroy person

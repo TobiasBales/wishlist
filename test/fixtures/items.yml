@@ -5,9 +5,11 @@ one:
   done: false
   quantity: 1
   list: one
+  url: https://www.example.com
 
 two:
   name: MyString
   done: false
   quantity: 1
   list: two
+  url: https://www.example.com

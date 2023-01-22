@@ -1,10 +1,7 @@
-<h1>Editing list</h1>
-
-<%= render "form", list: @list %>
-
-<br>
-
-<div>
-  <%= link_to "Show this list", @list %> |
-  <%= link_to "Back to lists", lists_path %>
-</div>
+<% page_title(t("lists.edit.page_title", list: @list.name)) %>
+<%= render(B::Page.new(crumbs: [
+  B::Crumb.new(text: t("lists.index.title"), to: lists_path),
+  B::Crumb.new(text: t("lists.edit.title", list: @list.name), to: edit_list_path(@list)),
+])) do %>
+  <%= render "form", list: @list %>
+<% end %>

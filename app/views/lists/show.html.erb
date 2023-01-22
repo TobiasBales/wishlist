@@ -1,17 +1,23 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @list %>
-<ul>
-  <% @list.items.each do |i| %>
-    <li>
-      <%= link_to i.name, i.url %>
-    </li>
-  <% end %>
-</ul>
-
-<div>
-  <%= link_to "Edit this list", edit_list_path(@list) %> |
-  <%= link_to "Back to lists", lists_path %>
-
-  <%= button_to "Destroy this list", @list, method: :delete %>
-</div>
+<% page_title(t("lists.show.page_title", list: @list.name)) %>
+<%= render(B::Page.new(crumbs: [
+  B::Crumb.new(text: t("lists.index.title"), to: lists_path),
+  B::Crumb.new(text: t("lists.show.title", list: @list.name), to: @list)
+], actions: [
+  B::Action.new(text: t("lists.actions.edit"), to: edit_list_path(@list)),
+  B::Action.new(text: t("lists.actions.destroy"), to: list_path(@list), method: :delete, confirm: t("general.confirm"))
+])) do %>
+<div id="<%= dom_id @list %>">
+  <h5><%= @list.name %></h5>
+  <h6><%= @list.person.name %></h6>
+  <div class="row">
+    <% @list.items.each do |item| %>
+      <div class="col-4">
+        <%= render(B::Card.new(title: item.name)) do |c| %>
+          <% c.with_body do %>
+            <%= render(B::Button.new(text: t("general.open"), to: item.url)) %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

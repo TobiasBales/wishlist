@@ -3,7 +3,7 @@
 
 class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update, :destroy]
-  before_action :set_people, only: [:new, :edit]
+  before_action :set_people, only: [:new, :create, :edit, :update]
 
   # GET /lists or /lists.json
   def index
