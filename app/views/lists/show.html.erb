@@ -1,6 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @list %>
+<ul>
+  <% @list.items.each do |i| %>
+    <li>
+      <%= link_to i.name, i.url %>
+    </li>
+  <% end %>
+</ul>
 
 <div>
   <%= link_to "Edit this list", edit_list_path(@list) %> |
