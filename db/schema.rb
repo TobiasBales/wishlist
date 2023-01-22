@@ -19,9 +19,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_22_100324) do
     t.index ["user_id"], name: "index_email_verification_tokens_on_user_id"
   end
 
-  create_table "lists", force: :cascade do |t|
+  create_table "lists", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name"
-    t.bigint "person_id", null: false
+    t.uuid "person_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["person_id"], name: "index_lists_on_person_id"
@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_22_100324) do
     t.index ["user_id"], name: "index_password_reset_tokens_on_user_id"
   end
 
-  create_table "people", force: :cascade do |t|
+  create_table "people", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
