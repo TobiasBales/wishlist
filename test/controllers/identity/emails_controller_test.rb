@@ -16,7 +16,7 @@ module Identity
     end
 
     test "should update email" do
-        patch identity_email_url, params: { email: "new_email@bales.systems" }
+      patch identity_email_url, params: { email: "new_email@bales.systems" }
 
       assert_redirected_to root_url
     end

@@ -6,6 +6,7 @@ require "application_system_test_case"
 class ListsTest < ApplicationSystemTestCase
   setup do
     @list = lists(:one)
+    sign_in_as(users(:default))
   end
 
   test "visiting the index" do
@@ -19,7 +20,7 @@ class ListsTest < ApplicationSystemTestCase
     click_on "New list"
 
     fill_in "Name", with: @list.name
-    fill_in "Person", with: @list.person_id
+    select @list.person.name, from: "Person"
     click_on "Create List"
 
     assert_text "List was successfully created"
@@ -31,7 +32,7 @@ class ListsTest < ApplicationSystemTestCase
     click_on "Edit this list", match: :first
 
     fill_in "Name", with: @list.name
-    fill_in "Person", with: @list.person_id
+    select @list.person.name, from: "Person"
     click_on "Update List"
 
     assert_text "List was successfully updated"

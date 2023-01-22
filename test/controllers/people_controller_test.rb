@@ -48,7 +48,7 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy person" do
-      @person = people(:no_lists)
+    @person = people(:no_lists)
     assert_difference("Person.count", -1) do
       delete person_url(@person)
     end

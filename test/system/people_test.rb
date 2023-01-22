@@ -6,6 +6,7 @@ require "application_system_test_case"
 class PeopleTest < ApplicationSystemTestCase
   setup do
     @person = people(:one)
+    sign_in_as(users(:default))
   end
 
   test "visiting the index" do
@@ -37,6 +38,7 @@ class PeopleTest < ApplicationSystemTestCase
   end
 
   test "should destroy Person" do
+    @person = people(:no_lists)
     visit person_url(@person)
     click_on "Destroy this person", match: :first
 
