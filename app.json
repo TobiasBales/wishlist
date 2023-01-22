@@ -1,0 +1,10 @@
+{
+  "name": "Wishlist",
+  "description": "All the wishlists you will ever need",
+  "keywords": [],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+---
+require:
+  - rubocop-minitest
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-sorbet
+
+AllCops:
+  TargetRubyVersion: 2.6
+  NewCops: enable
+  Exclude:
+    - bundle/vendor/**/*
+    - vendor/**/*
+    - db/schema.rb
+    - bin/*
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - test/**/*
+
+Metrics/ClassLength:
+  Enabled: true
+  Exclude:
+    - test/**/*
+
+Metrics/AbcSize:
+  Max: 25
+    
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Minitest/MultipleAssertions:
+  Max: 5
+
+Rails/Delegate:
+  Enabled: false
+
+Rails/I18nLocaleTexts:
+  Enabled: false
+    
+Style/AccessorGrouping:
+  EnforcedStyle: separated
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Layout/LineLength:
+  Max: 120

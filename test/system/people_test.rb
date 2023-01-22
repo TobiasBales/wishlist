@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 require "application_system_test_case"
 
 class PeopleTest < ApplicationSystemTestCase
@@ -7,6 +10,7 @@ class PeopleTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit people_url
+
     assert_selector "h1", text: "People"
   end
 

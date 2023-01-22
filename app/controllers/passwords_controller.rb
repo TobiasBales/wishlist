@@ -1,8 +1,10 @@
+# typed: true
+# frozen_string_literal: true
+
 class PasswordsController < ApplicationController
   before_action :set_user
 
-  def edit
-  end
+  def edit; end
 
   def update
     if !@user.authenticate(params[:current_password])
@@ -15,11 +17,12 @@ class PasswordsController < ApplicationController
   end
 
   private
-    def set_user
-      @user = Current.user
-    end
 
-    def user_params
-      params.permit(:password, :password_confirmation)
-    end
+  def set_user
+    @user = Current.user
+  end
+
+  def user_params
+    params.permit(:password, :password_confirmation)
+  end
 end

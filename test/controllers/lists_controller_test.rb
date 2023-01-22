@@ -1,3 +1,6 @@
+# typed: true
+# frozen_string_literal: true
+
 require "test_helper"
 
 class ListsControllerTest < ActionDispatch::IntegrationTest
@@ -7,11 +10,13 @@ class ListsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get index" do
     get lists_url
+
     assert_response :success
   end
 
   test "should get new" do
     get new_list_url
+
     assert_response :success
   end
 
@@ -25,16 +30,19 @@ class ListsControllerTest < ActionDispatch::IntegrationTest
 
   test "should show list" do
     get list_url(@list)
+
     assert_response :success
   end
 
   test "should get edit" do
     get edit_list_url(@list)
+
     assert_response :success
   end
 
   test "should update list" do
     patch list_url(@list), params: { list: { name: @list.name, person_id: @list.person_id } }
+
     assert_redirected_to list_url(@list)
   end
 

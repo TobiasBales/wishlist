@@ -1,3 +1,6 @@
+# typed: true
+# frozen_string_literal: true
+
 class RegistrationsController < ApplicationController
   skip_before_action :authenticate
 
@@ -20,11 +23,12 @@ class RegistrationsController < ApplicationController
   end
 
   private
-    def user_params
-      params.permit(:email, :password, :password_confirmation)
-    end
 
-    def send_email_verification
-      UserMailer.with(user: @user).email_verification.deliver_later
-    end
+  def user_params
+    params.permit(:email, :password, :password_confirmation)
+  end
+
+  def send_email_verification
+    UserMailer.with(user: @user).email_verification.deliver_later
+  end
 end

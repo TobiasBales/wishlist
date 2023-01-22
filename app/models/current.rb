@@ -1,8 +1,12 @@
+# typed: strict
+# frozen_string_literal: true
+
 class Current < ActiveSupport::CurrentAttributes
   attribute :session, :user
   attribute :user_agent, :ip_address
 
   def session=(session)
-    super; self.user = session.user
+    super
+    self.user = session.user
   end
 end

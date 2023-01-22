@@ -1,3 +1,6 @@
+# typed: false
+# frozen_string_literal: true
+
 require "application_system_test_case"
 
 class SessionsTest < ApplicationSystemTestCase
@@ -9,6 +12,7 @@ class SessionsTest < ApplicationSystemTestCase
     sign_in_as @user
 
     click_on "Devices & Sessions"
+
     assert_selector "h1", text: "Sessions"
   end
 
@@ -25,6 +29,7 @@ class SessionsTest < ApplicationSystemTestCase
     sign_in_as @user
 
     click_on "Log out"
+
     assert_text "That session has been logged out"
   end
 end

@@ -1,3 +1,6 @@
+# typed: true
+# frozen_string_literal: true
+
 require "test_helper"
 
 class PeopleControllerTest < ActionDispatch::IntegrationTest
@@ -7,11 +10,13 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
 
   test "should get index" do
     get people_url
+
     assert_response :success
   end
 
   test "should get new" do
     get new_person_url
+
     assert_response :success
   end
 
@@ -25,16 +30,19 @@ class PeopleControllerTest < ActionDispatch::IntegrationTest
 
   test "should show person" do
     get person_url(@person)
+
     assert_response :success
   end
 
   test "should get edit" do
     get edit_person_url(@person)
+
     assert_response :success
   end
 
   test "should update person" do
     patch person_url(@person), params: { person: { name: @person.name } }
+
     assert_redirected_to person_url(@person)
   end
 
