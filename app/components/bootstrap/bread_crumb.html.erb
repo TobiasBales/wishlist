@@ -1,0 +1,13 @@
+<nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+  <ol class="breadcrumb">
+    <% crumbs.each_with_index do |crumb, i| %>
+      <li class="breadcrumb-item <%= 'active' if i == crumbs.length - 1 %>" aria-current="page">
+        <% if i == crumbs.length - 1 %>
+          <%= crumb.text %>
+        <% else %>
+          <%= render Bootstrap::Link.new(text: crumb.text, to: crumb.to) %>
+        <% end %>
+      </li>
+    <% end %>
+  </ol>
+</nav>

@@ -1,0 +1,5 @@
+<% if method == :get && confirm.nil? %>
+  <%= link_to(text, to, class: "btn #{classes}") %>
+<% else %>
+  <%= button_to(text, to, class: "btn #{classes}", method: method, form: { class: "d-inline-block", data: { turbo_confirm: confirm } }, params: params, data: { toggle: dropdown ? "dropdown" : nil}) %>
+<% end %>

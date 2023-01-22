@@ -1,0 +1,13 @@
+<div class="btn-group" role="group">
+  <%= render(Bootstrap::Button.new(text: first.text, to: first.to, method: first.method, confirm: first.confirm)) %>
+  <% if rest.present? %>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <% rest.each do |action| %>
+        <%= button_to action.text, action.to, class: "dropdown-item", method: action.method, data: { turbo_method: action.method, turbo_confirm: action.confirm } %>
+      <% end %> 
+    </div>
+  <% end %>
+</div>

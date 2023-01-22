@@ -1,0 +1,3 @@
+<% flash.each do |type, title| %>
+  <%= render Bootstrap::Notification.new(type: type, title: title) %>
+<% end %>

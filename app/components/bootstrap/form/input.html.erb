@@ -1,0 +1,7 @@
+<div class="mt-3 form-group">
+  <%= render(Bootstrap::Form::Tag::Label.new(form: form, field: field, label: label)) %>
+  <%= render(Bootstrap::Form::Tag::Input.new(form: form, field: field, type: type, autofocus: autofocus, multiple: multiple, autocomplete: autocomplete, required: required)) %>
+  <% if hint.present? %>
+    <small class="form-text text-muted"><%= hint %></small>
+  <% end %>
+</div>

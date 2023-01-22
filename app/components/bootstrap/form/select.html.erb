@@ -1,0 +1,4 @@
+<div class="mt-3 form-group">
+  <%= render(Bootstrap::Form::Tag::Label.new(form: @form, field: @field)) %>
+  <%= @form.select @field, @options, { include_blank: @include_blank }, { class: "form-select" } %>
+</div>

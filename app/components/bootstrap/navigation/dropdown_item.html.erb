@@ -1,0 +1,7 @@
+<li>
+  <% if method.present? %>
+    <%= button_to text, to, method: method, class: "dropdown-item" %>
+  <% else %>
+    <%= link_to text, to, class: "dropdown-item #{classes}" %>
+  <% end %>
+</li>

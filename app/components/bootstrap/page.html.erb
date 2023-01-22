@@ -1,0 +1,22 @@
+<div class="container">
+  <header class="my-3">
+    <div class="d-flex justify-content-between">
+      <div>
+        <% if crumbs.present? %>
+          <%= render Bootstrap::BreadCrumb.new(crumbs: @crumbs) %>
+        <% end %>
+        <% if title.present? %>
+          <h1>
+            <%= title %>
+          </h1>
+        <% end %>
+      </div>
+      <% if actions.present? %>
+        <%= render(Bootstrap::Actions.new(actions: actions)) %>
+      <% end %>
+    </div>
+  </header>
+  <main>
+    <%= content %>
+  </main>
+</div>
