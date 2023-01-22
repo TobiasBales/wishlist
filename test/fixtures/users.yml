@@ -4,3 +4,4 @@ default:
   email: default@bales.systems
   password_digest: <%= BCrypt::Password.create("Secret1*3*5*") %>
   verified: true
+  enabled: true

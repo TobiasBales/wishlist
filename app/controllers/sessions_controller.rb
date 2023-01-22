@@ -14,8 +14,14 @@ class SessionsController < ApplicationController
     @user = User.new
   end
 
+  # rubocop:disable Metrics/MethodLength
   def create
     user = User.find_by(email: params[:email])
+
+    unless user&.enabled?
+      redirect_to sign_in_path(email_hint: params[:email]),
+                  alert: "Your account needs to be enabled first"
+    end
 
     if user&.authenticate(params[:password])
       @session = user.sessions.create!
@@ -26,6 +32,7 @@ class SessionsController < ApplicationController
       redirect_to sign_in_path(email_hint: params[:email]), alert: "That email or password is incorrect"
     end
   end
+  # rubocop:enable Metrics/MethodLength
 
   def destroy
     @session.destroy
