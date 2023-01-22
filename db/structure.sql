@@ -306,7 +306,7 @@ CREATE TABLE public.items (
 
 CREATE TABLE public.lists (
     id uuid DEFAULT gen_random_uuid() NOT NULL,
-    name character varying,
+    name character varying NOT NULL,
     person_id uuid NOT NULL,
     created_at timestamp(6) without time zone NOT NULL,
     updated_at timestamp(6) without time zone NOT NULL
@@ -735,6 +735,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20230122131626'),
 ('20230122180125'),
 ('20230122180738'),
-('20230122190538');
+('20230122190538'),
+('20230122195657');
 
 
