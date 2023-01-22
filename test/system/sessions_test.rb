@@ -29,7 +29,6 @@ class SessionsTest < ApplicationSystemTestCase
     sign_in_as @user
 
     click_on @user.email
-    take_screenshot
     click_on "Log Out"
 
     assert_text "That session has been logged out"
