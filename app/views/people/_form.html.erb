@@ -11,12 +11,8 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+  <%= render(B::Form::Input.new(form: form, field: :name)) %>
+  <%= render(B::Form::Actions.new) do %>
+    <%= render(B::Form::Button.new(form: form, label: t("general.save"), type: :submit)) %>
+  <% end %>
 <% end %>

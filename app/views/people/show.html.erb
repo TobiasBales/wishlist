@@ -1,10 +1,10 @@
-<p style="color: green"><%= notice %></p>
-
+<% page_title(t("people.show.page_title", person: @person.name)) %>
+<%= render(B::Page.new(crumbs: [
+  B::Crumb.new(text: t("people.index.title"), to: people_path),
+  B::Crumb.new(text: t("people.show.title", person: @person.name), to: @person)
+], actions: [
+  B::Action.new(text: t("people.actions.edit"), to: edit_person_path(@person)),
+  B::Action.new(text: t("people.actions.destroy"), to: person_path(@person), method: :delete, confirm: t("general.confirm"))
+])) do %>
 <%= render @person %>
-
-<div>
-  <%= link_to "Edit this person", edit_person_path(@person) %> |
-  <%= link_to "Back to people", people_path %>
-
-  <%= button_to "Destroy this person", @person, method: :delete %>
-</div>
+<% end %>

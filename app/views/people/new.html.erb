@@ -1,9 +1,7 @@
-<h1>New person</h1>
-
-<%= render "form", person: @person %>
-
-<br>
-
-<div>
-  <%= link_to "Back to people", people_path %>
-</div>
+<% page_title(t("people.new.page_title")) %>
+<%= render(B::Page.new(crumbs: [
+  B::Crumb.new(text: t("people.index.title"), to: people_path),
+  B::Crumb.new(text: t("people.new.title"), to: new_person_path)
+])) do %>
+  <%= render "form", person: @person %>
+<% end %>

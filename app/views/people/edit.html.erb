@@ -1,10 +1,7 @@
-<h1>Editing person</h1>
-
-<%= render "form", person: @person %>
-
-<br>
-
-<div>
-  <%= link_to "Show this person", @person %> |
-  <%= link_to "Back to people", people_path %>
-</div>
+<% page_title(t("people.edit.page_title", person: @person.name)) %>
+<%= render(B::Page.new(crumbs: [
+  B::Crumb.new(text: t("people.index.title"), to: people_path),
+  B::Crumb.new(text: t("people.edit.title", person: @person.name), to: edit_person_path(@person))
+])) do %>
+  <%= render "form", person: @person %>
+<% end %>
