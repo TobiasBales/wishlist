@@ -4,7 +4,7 @@
 ])) do %>
   <div id="lists" class="row">
     <% @lists.each do |list| %>
-      <div class="col-4">
+      <div class="col-md-4 mb-3">
         <%= render(B::Card.new(title: list.name, subtitle: list.person.name)) do |c| %>
           <% c.with_body do %>
             <%= render(B::Button.new(text: t("general.show"), to: list)) %>
