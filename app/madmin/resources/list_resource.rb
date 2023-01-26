@@ -7,6 +7,7 @@ class ListResource < Madmin::Resource
   attribute :name
   attribute :person
   attribute :items
+  attribute :done_word
   attribute :id, form: false
   attribute :created_at, form: false
   attribute :updated_at, form: false

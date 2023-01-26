@@ -309,7 +309,8 @@ CREATE TABLE public.lists (
     name character varying NOT NULL,
     person_id uuid NOT NULL,
     created_at timestamp(6) without time zone NOT NULL,
-    updated_at timestamp(6) without time zone NOT NULL
+    updated_at timestamp(6) without time zone NOT NULL,
+    done_word character varying
 );
 
 
@@ -736,6 +737,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20230122180125'),
 ('20230122180738'),
 ('20230122190538'),
-('20230122195657');
+('20230122195657'),
+('20230126184602');
 
 

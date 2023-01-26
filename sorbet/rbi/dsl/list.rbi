@@ -441,6 +441,51 @@ class List
     sig { void }
     def created_at_will_change!; end
 
+    sig { returns(T.nilable(::String)) }
+    def done_word; end
+
+    sig { params(value: T.nilable(::String)).returns(T.nilable(::String)) }
+    def done_word=(value); end
+
+    sig { returns(T::Boolean) }
+    def done_word?; end
+
+    sig { returns(T.nilable(::String)) }
+    def done_word_before_last_save; end
+
+    sig { returns(T.untyped) }
+    def done_word_before_type_cast; end
+
+    sig { returns(T::Boolean) }
+    def done_word_came_from_user?; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def done_word_change; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def done_word_change_to_be_saved; end
+
+    sig { returns(T::Boolean) }
+    def done_word_changed?; end
+
+    sig { returns(T.nilable(::String)) }
+    def done_word_in_database; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def done_word_previous_change; end
+
+    sig { returns(T::Boolean) }
+    def done_word_previously_changed?; end
+
+    sig { returns(T.nilable(::String)) }
+    def done_word_previously_was; end
+
+    sig { returns(T.nilable(::String)) }
+    def done_word_was; end
+
+    sig { void }
+    def done_word_will_change!; end
+
     sig { returns(T.untyped) }
     def id; end
 
@@ -580,6 +625,9 @@ class List
     def restore_created_at!; end
 
     sig { void }
+    def restore_done_word!; end
+
+    sig { void }
     def restore_id!; end
 
     sig { void }
@@ -596,6 +644,12 @@ class List
 
     sig { returns(T::Boolean) }
     def saved_change_to_created_at?; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def saved_change_to_done_word; end
+
+    sig { returns(T::Boolean) }
+    def saved_change_to_done_word?; end
 
     sig { returns(T.nilable([T.untyped, T.untyped])) }
     def saved_change_to_id; end
@@ -668,6 +722,9 @@ class List
 
     sig { returns(T::Boolean) }
     def will_save_change_to_created_at?; end
+
+    sig { returns(T::Boolean) }
+    def will_save_change_to_done_word?; end
 
     sig { returns(T::Boolean) }
     def will_save_change_to_id?; end
