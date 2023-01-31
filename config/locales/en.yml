@@ -7,6 +7,10 @@ en:
     index:
         title: Lists
         page_title: Lists
+  items:
+    new:
+      title: New Item
+      page_title: "%{list} - New Item"
   lists:
     index:
       title: Lists

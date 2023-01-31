@@ -18,6 +18,9 @@ module GeneratedPathHelpersModule
   def edit_identity_password_reset_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def edit_list_item_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def edit_list_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -67,6 +70,12 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def identity_password_reset_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def list_item_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def list_items_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def list_path(*args); end
@@ -139,6 +148,9 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def new_identity_password_reset_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_list_item_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_list_path(*args); end

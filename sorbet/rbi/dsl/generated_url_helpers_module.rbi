@@ -18,6 +18,9 @@ module GeneratedUrlHelpersModule
   def edit_identity_password_reset_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def edit_list_item_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def edit_list_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -67,6 +70,12 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def identity_password_reset_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def list_item_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def list_items_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def list_url(*args); end
@@ -139,6 +148,9 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def new_identity_password_reset_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_list_item_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_list_url(*args); end

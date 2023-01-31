@@ -3,7 +3,9 @@
 
 Rails.application.routes.draw do
   draw :madmin
-  resources :lists
+  resources :lists do
+    resources :items
+  end
   resources :people
   get  "sign_in", to: "sessions#new"
   post "sign_in", to: "sessions#create"

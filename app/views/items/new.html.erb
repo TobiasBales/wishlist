@@ -1,0 +1,10 @@
+<% page_title(t("items.new.page_title", list: @list.name)) %>
+<%= render(B::Page.new(crumbs: [
+  B::Crumb.new(text: t("lists.index.title"), to: lists_path),
+  B::Crumb.new(text: t("lists.show.title", list: @list.name), to: @list),
+  B::Crumb.new(text: t("items.new.title"), to: new_list_item_path(@list)),
+], actions: [])) do %>
+  <%= turbo_frame_tag dom_id(@list, :new_item) do %>
+    <%= render(C::Items::New.new(list: @list, item: @item)) %>
+  <% end %>
+<% end %>

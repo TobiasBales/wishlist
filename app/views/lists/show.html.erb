@@ -9,4 +9,5 @@
   <%= turbo_frame_tag dom_id(@list) do %>
     <%= render(C::Lists::Show.new(list: @list, active: @active, done: @done)) %>
   <% end %>
+  <%= turbo_frame_tag dom_id(@list, :new_item), src: new_list_item_path(@list) %>
 <% end %>

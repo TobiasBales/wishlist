@@ -8,6 +8,8 @@ class Item < ApplicationRecord
   belongs_to :list
   has_one_attached :image
 
+  validates :name, presence: true
+  validates :url, presence: true
   validates :image, blob: { content_type: :image }
 
   sig { returns(T.any(String, T.nilable(ActiveStorage::VariantWithRecord))) }

@@ -1,0 +1,23 @@
+<div class="mt-3">
+    <%= form_with(model: item, url: list_items_path(list)) do |form| %>
+      <% if item.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+          <ul>
+            <% item.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= render(Bootstrap::Form::Input.new(form: form, field: :name)) %>
+      <%= render(Bootstrap::Form::Input.new(form: form, field: :url)) %>
+      <%= render(Bootstrap::Form::Input.new(form: form, field: :quantity, type: :number)) %>
+      <%= render(Bootstrap::Form::Input.new(form: form, field: :image, type: :file)) %>
+      <%= render(Bootstrap::Form::Actions.new) do %>
+        <%= render(Bootstrap::Form::Button.new(form: form, label: t("general.save"), type: :submit)) %>
+      <% end %>
+    <% end %>
+</div>
+</div>
