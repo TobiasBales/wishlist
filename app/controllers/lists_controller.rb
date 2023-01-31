@@ -12,7 +12,7 @@ class ListsController < ApplicationController
 
   # GET /lists/1 or /lists/1.json
   def show
-    @items, @done = @list.items.order(:name).partition { |i| !i.done }
+    @active, @done = @list.items.order(:name).partition { |i| !i.done }
   end
 
   # GET /lists/new

@@ -1,0 +1,27 @@
+<h5><%= list.name %></h5>
+<h6><%= list.person.name %></h6>
+<div class="row">
+  <% active.each do |item| %>
+    <div class="col-md-4 mb-3">
+      <%= render(B::Card.new(title: item.name, image: item.preview_or_placeholder, image_fill: "contain")) do |c| %>
+        <% c.with_body do %>
+          <%= render(B::Button.new(text: t("general.open"), to: item.url, target: "_blank")) %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<% if done.any? %>
+  <h5><%= list.done_word&.capitalize || "Bought" %></h5>
+  <div class="row">
+    <% done.each do |item| %>
+      <div class="col-md-4 mb-3">
+        <%= render(B::Card.new(title: item.name, subtitle: list.done_word || "bought", image: item.preview_or_placeholder, image_fill: "contain", disabled: true)) do |c| %>
+          <% c.with_body do %>
+            <%= render(B::Button.new(text: t("general.open"), to: item.url, target: "_blank")) %>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
